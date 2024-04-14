@@ -1,0 +1,12 @@
+{% extends 'logistics/base.html' %}
+{% block form %}
+    <h2 class="form__title">Создать заказ</h2>
+    <p style="text-align: center;">Сроки выполнения заказа будут отправлены вам на почту.</p>
+    <form method="POST" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button-submit">Отправить заказ</button>
+    </form>
+    
+
+{% endblock %}

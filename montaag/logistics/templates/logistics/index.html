@@ -1,0 +1,14 @@
+{% extends 'logistics/base.html' %}
+{% block main %}
+    
+    <section class="welcome__section">
+        <div class="container">
+            <h2 class="welcome__title">Компания, которая доставит все.</h2>
+            <p class="welcome__text">Наша логистическая компания предоставляет наилучшие условия доставки ваших вещей, товаров и т.д. Мы даем возможность выбрать из множества вариантов именно тот тариф, который подойдет вам.</p>
+            <a href="{% url 'logistics:tariffs' %}" class="button-link">К тарифам</a>
+            <a href="{% url 'logistics:contact' %}" class="button-link">Связаться с нами📞</a>
+            <a href="{% url 'logistics:create-order' %}" class="button-link" style="background-color: blue;">Сделать заказ📋</a>
+        </div>
+    </section>
+      
+{% endblock %}

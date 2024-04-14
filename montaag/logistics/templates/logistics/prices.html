@@ -1,0 +1,21 @@
+{% extends 'logistics/base.html' %}
+{% block tariffs %}
+    <section class="tariff">
+        <div class="container">
+            {% for tariff in tariffs %}
+            <a href="{% url 'logistics:create-order' %}"><div class="tariff__card">
+                <img src="{{ tariff.image.url }}" alt="">
+                <h4 class="tariff__title">{{ tariff.title }} | {{ tariff.price }}</h4>
+                
+                <p class="tariff__text">{{ tariff.description }}</p>
+                
+                
+
+            </div>
+            </a>
+            {% endfor %}
+           
+            
+        </div>
+    </section>
+{% endblock %}

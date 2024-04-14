@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONTAAG</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logistics/css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <a href="{% url 'logistics:home' %}"><h1 class="header__title">MONTAAG</h1></a>
+    </header>
+    {% block main %}
+    {% endblock main %}
+    {% block tariffs %}
+    {% endblock tariffs %}
+    {% block contact %}
+    {% endblock contact %}
+    {% block form %}
+    {% endblock form %}
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">ООО "MONTAAG" является коммерческой организацией. Компания входит в группу инвесторов Redacted's Global Investment Group. Сайт создал M1ss1k.</p>
+        </div>
+    </footer>  
+    
+</body>
+</html>
